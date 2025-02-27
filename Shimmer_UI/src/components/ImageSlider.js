@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const data = [
     "https://plus.unsplash.com/premium_photo-1668024966086-bd66ba04262f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NlbmVyeXxlbnwwfHwwfHx8MA%3D%3D",
@@ -9,7 +9,12 @@ const data = [
 
 export const ImageSlider = () => {
     const [active, setActive] = useState(0);
-    console.log(active)
+    /* useEffect(() => {
+        const i = setInterval(() => {
+            handleNextClick()
+        }, 2000)
+        return () => clearInterval(i)
+    }, []) */
     const handlePrevClick = () => {
         
         setActive((active) => ((active-1) < 0) ? data.length-1 : (active -1))
