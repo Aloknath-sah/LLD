@@ -7,6 +7,7 @@ import { ProtectedRoutes } from './components/ProtectedRoutes';
 import { Login } from './components/Login';
 import { Accordion } from './components/Accordion';
 import { Comments } from './components/comments';
+import { ImageSlider } from './components/ImageSlider';
 
 const App = () => {
   const [lang, setLang] = useState('en')
@@ -20,6 +21,7 @@ const App = () => {
           <a href="/login">Login </a>
           <a href="/accordion">Accordion</a>
           <a href="/comments">Comments</a>
+          <a href="/imageSlider">ImageSlider</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en">English</option>
@@ -35,6 +37,7 @@ const App = () => {
           <Route path="/login" element={<Login/>} />
           <Route path="/accordion" element={<Accordion />} />
           <Route path="/comments" element={<Comments />} />
+          <Route path="/imageSlider" element={<ImageSlider />} />
         </Routes>
       </BrowserRouter>
     </div>
