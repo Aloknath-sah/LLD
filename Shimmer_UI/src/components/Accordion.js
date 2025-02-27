@@ -17,7 +17,7 @@ const data = [
 ];
 
 export const Accordion = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState([0,1]);
 
   return (
     <div>
