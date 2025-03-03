@@ -9,6 +9,7 @@ import { Accordion } from './components/Accordion';
 import { Comments } from './components/comments';
 import { ImageSlider } from './components/ImageSlider';
 import { Pagination } from './components/Pagination';
+import { SearchUI } from './components/Search-UI';
 
 const App = () => {
   const [lang, setLang] = useState('en')
@@ -24,6 +25,7 @@ const App = () => {
           <a href="/comments">Comments</a>
           <a href="/imageSlider">ImageSlider</a>
           <a href="/pagination">Pagination</a>
+          <a href="/Search-UI">Search UI</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en">English</option>
@@ -41,6 +43,7 @@ const App = () => {
           <Route path="/comments" element={<Comments />} />
           <Route path="/imageSlider" element={<ImageSlider />} />
           <Route path="/pagination" element={<Pagination />} />
+          <Route path="/Search-UI" element={<SearchUI />} />
         </Routes>
       </BrowserRouter>
     </div>
